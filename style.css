@@ -1,0 +1,264 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #fff;
+}
+
+/* Header */
+header {
+    background: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #b0b0b0; /* Light gray for neutral look */
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #6A0DAD; /* Royal Purple */
+    text-shadow: 0px 0px 10px rgba(106, 13, 173, 0.7); /* Glowing Royal Purple */
+}
+
+/* Active Link Style */
+nav ul li a.active {
+    color: #6A0DAD; /* Royal Purple for active link */
+    text-shadow: 0px 0px 6px rgba(106, 13, 173, 0.6); /* Subtle glowing royal purple */
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* About Section Adjustments */
+#about {
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto 20px;
+    text-align: left;
+    background-color: #1a1a1a; /* Dark background */
+    border-radius: 10px;
+    border: 2px solid #6A0DAD; /* Royal Purple Border */
+    box-shadow: 0px 0px 20px rgba(106, 13, 173, 0.6); /* Glowing Royal Purple */
+}
+
+/* Footer Spacing */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px solid #333;
+    margin-top: 40px;
+}
+
+/* About Header */
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #6A0DAD; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(106, 13, 173, 0.6); /* Glowing Royal Purple */
+}
+
+/* Animated Typing Effect */
+.about-content h2::after {
+    content: "|";
+    display: inline-block;
+    animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Terminal-like Command Styling */
+.command {
+    font-family: 'Courier New', monospace;
+    background: #000;
+    color: #6A0DAD; /* Royal Purple */
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(106, 13, 173, 0.5); /* Glowing Royal Purple */
+    font-size: 16px;
+}
+
+/* Social Media Section */
+.social-links {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.linkedin-link {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.linkedin-link:hover {
+    color: #6A0DAD; /* Royal Purple */
+    text-shadow: 0px 0px 10px rgba(106, 13, 173, 0.7); /* Glowing Royal Purple */
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact h3 {
+    font-size: 24px;
+    color: #fff; 
+}
+
+.contact p {
+    font-size: 18px;
+}
+
+.contact .email-link {
+    color: #6A0DAD; /* Royal Purple */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .email-link:hover {
+    text-shadow: 0px 0px 5px rgba(106, 13, 173, 0.7); /* Glowing Royal Purple */
+}
+
+/* Projects Section */
+#projects {
+    padding: 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    margin-bottom: 10px;
+    color: #6A0DAD; /* Royal Purple */
+    text-shadow: 0px 0px 10px rgba(106, 13, 173, 0.7); /* Glowing Royal Purple */
+}
+
+#projects .description {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* Grid Layout for Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Dark-Themed Project Cards */
+.project-card {
+    background-color: #222;
+    border: 2px solid #6A0DAD; /* Royal Purple Border */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(106, 13, 173, 0.3); /* Glowing Royal Purple */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0px 0px 6px rgba(106, 13, 173, 0.6); /* Glowing Royal Purple */
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.project-card .view-more {
+    text-decoration: none;
+    color: #6A0DAD; /* Royal Purple */
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(106, 13, 173, 0.7); /* Glowing Royal Purple */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(106, 13, 173, 0.2); /* Glowing Royal Purple on hover */
+    border: 2px solid #6A0DAD; /* Royal Purple Border */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px solid #333;
+}
+
+/* Highlighted Trademark Text */
+footer .trademark {
+    color: #6A0DAD; /* Royal Purple */
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(106, 13, 173, 0.5); /* Glowing Royal Purple */
+}
+
+/* Hover Effect */
+footer:hover {
+    color: #fff;
+}
+
+footer .trademark:hover {
+    text-shadow: 0px 0px 10px rgba(106, 13, 173, 0.8); /* Glowing Royal Purple */
+}
