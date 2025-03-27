@@ -17,44 +17,107 @@
         </nav>
     </header>
 
-    <section>
+    <section class="xss-steps">
         <h2>Understanding XSS Attacks</h2>
-        <p>Below is my presentation on Cross-Site Scripting (XSS). Scroll through the slides, and find the footnotes with additional explanations below.</p>
-        
-        <!-- ✅ Embed PDF Presentation -->
-        <!-- If you want to embed a PDF from Google Drive or another online source -->
-        <iframe src="Images/XSS_Presentation.pdf" 
-                frameborder="0" width="800" height="500" allowfullscreen></iframe>
+        <p>Scroll through each slide below to follow the presentation.</p>
 
-        <h3>Footnotes & Additional Explanation</h3>
-        
-        <p><strong>Slide 1:</strong> Hello, my name is Tahir, and today I plan to give a presentation on a security vulnerability named Cross-Site Scripting (XSS). The aim of this presentation is to raise awareness in a professional manner for an audience who wants to learn about XSS or understand its possible effects and mitigation techniques.</p>
-        
-        <p><strong>Slide 2:</strong> Stored XSS: As the name suggests, XSS involves inputting your own JavaScript on a web page. If successful, this allows the attacker to manipulate a website, creating serious security vulnerabilities. An example could be a user injecting malicious JavaScript that steals session cookies, which are essentially the user's authentication token or user ID for the webpage.</p>
-        
-        <p><strong>Slide 3:</strong> Reflected XSS: Session cookies are like an ID card that enables users to access websites without logging in again. If an attacker intercepts these cookies, they can access sensitive user data. This slide explains how reflected XSS can enable such attacks.</p>
-        
-        <p><strong>Slide 4:</strong> DOM-based XSS: DOM XSS is another form where malicious scripts can be executed via the browser's Document Object Model (DOM). The attack involves sending malicious scripts to a vulnerable website, which are then executed in the victim's browser, potentially stealing personal information.</p>
-        
-        <p><strong>Slide 5:</strong> Mitigation Strategies: The first step in defending against DOM XSS is to thoroughly inspect website functionality and avoid using untrusted data on the page. This presentation includes examples of how common web application vulnerabilities can be mitigated.</p>
-        
-        <p><strong>Slide 6:</strong> Mitigation Strategies: Figure 2 demonstrates a case where DOM XSS was triggered. Developers can mitigate these attacks by sanitizing client-side data, inspecting the DOM objects that interact with URLs and locations.</p>
-        
-        <p><strong>Slide 7:</strong> Mitigation Strategies: Figure 3 shows an example of Stored XSS on a blog website, where malicious JavaScript can be inserted through comment forms. The slide emphasizes the importance of sanitizing user input to prevent these attacks.</p>
-        
-        <p><strong>Slide 8:</strong> Prohibiting HTML/JavaScript code: Developers should prevent users from inputting HTML or JavaScript code into forms. For example, prohibiting semicolons (which are often used in JavaScript) can help prevent malicious code execution.</p>
-        
-        <p><strong>Slide 9:</strong> Validate Inputs: Validating user inputs ensures that they meet specific criteria, such as ensuring an email input contains an “@” symbol, and helps prevent XSS attacks.</p>
-        
-        <p><strong>Slide 10:</strong> Secure Your Cookies: Setting secure cookie policies and preventing JavaScript from accessing sensitive cookies are essential to reducing the impact of XSS attacks.</p>
-        
-        <p><strong>Slide 11:</strong> Use Web Application Firewalls (WAF): A good WAF can detect and block abnormal requests that might be indicative of XSS or other attacks, adding a layer of defense to the website.</p>
-        
-        <p><strong>Slide 12:</strong> Real-World Examples: This section will explore how real-world businesses were affected by XSS vulnerabilities and how these attacks were mitigated.</p>
-        
-        <p><strong>Slide 13:</strong> Real-World Examples of XSS: Here we explore a few notable cases of XSS attacks in businesses and their aftermath.</p>
-        
-        <p><strong>Slide 14:</strong> Thank you for your attention! I hope this presentation has helped you understand Cross-Site Scripting (XSS), its risks, and how to protect against it.</p>
+        <!-- Slide 1 -->
+        <div class="step">
+            <h3>Slide 1: Introduction</h3>
+            <img src="Images/slide1.jpg" alt="Slide 1">
+            <p><strong>Slide 1:</strong> Hello, my name is Tahir, and today I plan to give a presentation on a security vulnerability named Cross-Site Scripting (XSS). The aim of this presentation is to raise awareness in a professional manner for an audience who wants to learn about XSS or understand its possible effects and mitigation techniques.</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="step">
+            <h3>Slide 2: Stored XSS</h3>
+            <img src="Images/slide2.jpg" alt="Slide 2">
+            <p><strong>Slide 2:</strong> Stored XSS: As the name suggests, XSS involves inputting your own JavaScript on a web page. If successful, this allows the attacker to manipulate a website, creating serious security vulnerabilities. An example could be a user injecting malicious JavaScript that steals session cookies, which are essentially the user's authentication token or user ID for the webpage.</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="step">
+            <h3>Slide 3: Reflected XSS</h3>
+            <img src="Images/slide3.jpg" alt="Slide 3">
+            <p><strong>Slide 3:</strong> Reflected XSS: Session cookies are like an ID card that enables users to access websites without logging in again. If an attacker intercepts these cookies, they can access sensitive user data. This slide explains how reflected XSS can enable such attacks.</p>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="step">
+            <h3>Slide 4: DOM-Based XSS</h3>
+            <img src="Images/slide4.jpg" alt="Slide 4">
+            <p><strong>Slide 4:</strong> DOM-based XSS: DOM XSS is another form where malicious scripts can be executed via the browser's Document Object Model (DOM). The attack involves sending malicious scripts to a vulnerable website, which are then executed in the victim's browser, potentially stealing personal information.</p>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="step">
+            <h3>Slide 5: Mitigation Strategies</h3>
+            <img src="Images/slide5.jpg" alt="Slide 5">
+            <p><strong>Slide 5:</strong> Mitigation Strategies: The first step in defending against DOM XSS is to thoroughly inspect website functionality and avoid using untrusted data on the page. This presentation includes examples of how common web application vulnerabilities can be mitigated.</p>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="step">
+            <h3>Slide 6: Mitigation Example</h3>
+            <img src="Images/slide6.jpg" alt="Slide 6">
+            <p><strong>Slide 6:</strong> Mitigation Strategies: Figure 2 demonstrates a case where DOM XSS was triggered. Developers can mitigate these attacks by sanitising client-side data, inspecting the DOM objects that interact with URLs and locations.</p>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="step">
+            <h3>Slide 7: Stored XSS Example</h3>
+            <img src="Images/slide7.jpg" alt="Slide 7">
+            <p><strong>Slide 7:</strong> Mitigation Strategies: Figure 3 shows an example of Stored XSS on a blog website, where malicious JavaScript can be inserted through comment forms. The slide emphasises the importance of sanitising user input to prevent these attacks.</p>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="step">
+            <h3>Slide 8: Preventing HTML/JS Input</h3>
+            <img src="Images/slide8.jpg" alt="Slide 8">
+            <p><strong>Slide 8:</strong> Prohibiting HTML/JavaScript code: Developers should prevent users from inputting HTML or JavaScript code into forms. For example, prohibiting semicolons (which are often used in JavaScript) can help prevent malicious code execution.</p>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="step">
+            <h3>Slide 9: Validating Inputs</h3>
+            <img src="Images/slide9.jpg" alt="Slide 9">
+            <p><strong>Slide 9:</strong> Validate Inputs: Validating user inputs ensures that they meet specific criteria, such as ensuring an email input contains an “@” symbol, and helps prevent XSS attacks.</p>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="step">
+            <h3>Slide 10: Secure Your Cookies</h3>
+            <img src="Images/slide10.jpg" alt="Slide 10">
+            <p><strong>Slide 10:</strong> Secure Your Cookies: Setting secure cookie policies and preventing JavaScript from accessing sensitive cookies are essential to reducing the impact of XSS attacks.</p>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="step">
+            <h3>Slide 11: Web Application Firewalls</h3>
+            <img src="Images/slide11.jpg" alt="Slide 11">
+            <p><strong>Slide 11:</strong> Use Web Application Firewalls (WAF): A good WAF can detect and block abnormal requests that might be indicative of XSS or other attacks, adding a layer of defense to the website.</p>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="step">
+            <h3>Slide 12: Real-World Examples</h3>
+            <img src="Images/slide12.jpg" alt="Slide 12">
+            <p><strong>Slide 12:</strong> Real-World Examples: This section will explore how real-world businesses were affected by XSS vulnerabilities and how these attacks were mitigated.</p>
+        </div>
+
+        <!-- Slide 13 -->
+        <div class="step">
+            <h3>Slide 13: More Real-World Cases</h3>
+            <img src="Images/slide13.jpg" alt="Slide 13">
+            <p><strong>Slide 13:</strong> Real-World Examples of XSS: Here we explore a few notable cases of XSS attacks in businesses and their aftermath.</p>
+        </div>
+
+        <!-- Slide 14 -->
+        <div class="step">
+            <h3>Slide 14: Conclusion</h3>
+            <img src="Images/slide14.jpg" alt="Slide 14">
+            <p><strong>Slide 14:</strong> Thank you for your attention! I hope this presentation has helped you understand Cross-Site Scripting (XSS), its risks, and how to protect against it.</p>
+        </div>
     </section>
 
     <footer>
