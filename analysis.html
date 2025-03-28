@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for defining document properties -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Analysis - PrivacyPulse</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Internal CSS styles -->
+    <style>
+        /* CSS for the background color */
+        body {
+            background-color: #2e2252; /* Background color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            overflow-y: scroll; /* Allow vertical scrolling */
+        }
+
+        /* Header styling */
+        .header {
+            position: fixed; /* Fixed position */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width */
+            padding: 20px 10%; /* Padding */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            display: flex; /* Flex layout */
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Center align items */
+            z-index: 100; /* Z-index for stacking order */
+        }
+
+        /* Logo styling */
+        .logo {
+            font-size: 32px; /* Font size */
+            color: #fff; /* Text color */
+            text-decoration: none; /* Remove underline */
+            font-weight: 700; /* Font weight */
+            transition: .3s; /* Transition effect */
+            filter: drop-shadow(0 0 5px #09001d); /* Drop shadow effect */
+        }
+
+        /* Navbar styling */
+        .navbar a {
+            font-size: 18px; /* Font size */
+            color: #fff; /* Text color */
+            text-decoration: none; /* Remove underline */
+            font-weight: 500; /* Font weight */
+            margin-left: 35px; /* Left margin */
+        }
+
+        /* Navbar link hover and active styling */
+        .navbar a:hover,
+        .navbar a.active {
+            color: #4a4aff; /* Blue color */
+        }
+
+        /* Content section styling */
+        .content {
+            margin-top: 100px; /* Top margin */
+            padding: 20px; /* Padding */
+            color: #fff; /* Text color */
+            font-size: 20px; /* Font size */
+            text-align: center; /* Center align text */
+            max-width: 800px; /* Maximum width */
+            margin-left: auto; /* Auto left margin */
+            margin-right: auto; /* Auto right margin */
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 10px; /* Border radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow */
+            margin-bottom: 40px; /* Bottom margin */
+        }
+
+        /* Content section heading styling */
+        .content h1 {
+            font-size: 24px; /* Font size */
+            margin-bottom: 20px; /* Bottom margin */
+        }
+
+        /* Content section paragraph styling */
+        .content p {
+            font-size: 18px; /* Font size */
+            text-align: justify; /* Justify text */
+            margin-bottom: 20px; /* Bottom margin */
+            padding: 0 20px; /* Padding */
+        }
+
+        /* Section heading styling */
+        .section-heading {
+            font-size: 24px; /* Font size */
+            font-weight: bold; /* Font weight */
+            margin-bottom: 20px; /* Bottom margin */
+            color: #fff; /* Text color */
+            text-align: center; /* Center align text */
+        }
+
+        /* Section styling */
+        .section {
+            width: 100%; /* Full width */
+            margin-bottom: 40px; /* Bottom margin */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 10px; /* Border radius */
+            padding: 20px; /* Padding */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow */
+        }
+
+        /* Image container styling */
+        .image-container {
+            display: flex; /* Flex layout */
+            justify-content: center; /* Center justify content */
+            flex-direction: column; /* Column direction */
+            align-items: center; /* Center align items */
+            margin-top: 20px; /* Top margin */
+        }
+
+        /* Image styling */
+        .image-container img {
+            max-width: 100%; /* Maximum width */
+            height: auto; /* Auto height */
+            margin: 20px 0; /* Margin */
+            border-radius: 5px; /* Border radius */
+            border: 2px solid #4a4aff; /* Border */
+            padding: 5px; /* Padding */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header class="header">
+        <!-- Logo and navigation links -->
+        <a href="index.html" class="logo">PrivacyPulse.</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="learn.html">Learn</a>
+            <a href="analysis.html" class="active">Analysis</a>
+        </nav>
+    </header>
+
+    <!-- Content section -->
+    <div class="content">
+        <!-- Content heading -->
+        <h1>Welcome to the Analysis Page</h1>
+        <!-- Content paragraph -->
+        <p>This page is dedicated to providing in-depth analysis and research on privacy and security issues related to smart devices. I explore various topics, including vulnerability assessments, penetration testing, and forensic analysis, to shed light on potential risks and help users make informed decisions. Completing this analysis should show you how easy it can be for hackers to gain unauthorised access and is also provides an opportunity to show my skills.</p>
+    </div>
+
+    <!-- Section for Vulnerability Assessments -->
+    <div class="section">
+        <!-- Section heading for Vulnerability Assessments -->
+        <h2 class="section-heading">Vulnerability Assessments</h2>
+        <!-- Paragraph describing Vulnerability Assessments -->
+            <p>Vulnerability assessments involve identifying and documenting vulnerabilities in systems, networks, or applications. When I used tools like Nmap to scan smart devices connected to my network, I was essentially conducting a form of vulnerability assessment. Nmap can identify open ports, services running on those ports, and potentially vulnerable versions of those services.</p>
+        <div class="image-container">
+            <!-- Subheading for evidence -->
+            <h3>Evidence</h3>
+                
+                <img src="vuln1.jpg" alt="Vulnerability Assessment Image 1">
+                <p>The image above shows me running the command 'ifconfig' on my Virtual Kali Linux machine, which is deployed using VirtualBox on my PC connected to my home network. We can see that this has been done correctly as we get an IP address beginning with 192.168, which usually refers to the IP addresses within a home network. Using this information, we can run various commands such as Nmap to scan for devices within my network.</p>
+                
+                <img src="vuln2.jpg" alt="Vulnerability Assessment Image 2">
+                <p>As you can see, using the IP address of the Kali Linux machine, we can run an Nmap scan, which is short for Network Map on the entire network using the '/24' at the end of the IP address to scan all IP addresses within 24 bits and look for open ports on running devices.</p>
+                
+                <img src="vuln3.jpg" alt="Vulnerability Assessment Image 3">
+                <p>From the two images above that display the output of the Nmap scan, we can see the running devices on my home network. For example, portrayed in the images you can see the SkyRouter open ports, a smart TV named DIXONS-JVC-TV, and two other devices which can be identified as iPhones even though it says unknown due to the simple fact that the iPhone-sync service is open on both. Identifying open ports is a great tool, as with it we can see any potential security flaws within the network via delving deeper into the ports that appear to be open and performing research on websites such as the CVE (Common Vulnerabilities and Exposures) webpage to determine whether or not the ports open are vulnerable to certain attacks. In my case, none of these open ports served an issue.</p>
+        </div>
+    </div>
+
+
+    <!-- Section for Penetration Testing -->
+    <div class="section">
+        <h2 class="section-heading">Penetration Testing</h2>
+            <p>Penetration testing, or pen testing, involves simulating real-world attacks to identify security weaknesses in systems or applications. When I attempted to hack an emulated Android device using AndroRAT, I was essentially conducting a form of penetration testing. Penetration testing aims to exploit vulnerabilities to determine the impact they could have on a system's security.</p>
+        <div class="image-container">
+            <h3>Evidence</h3>
+                <img src="pentest1.jpg" alt="Penetration Testing Image 1">
+                <p>To implement a form of penetration testing, I used the AndroRat GitHub repository to present how easy it is for hackers to completely take over an Android phone using a link that can be sent to the user where if the user clicks on the link and doesn't pay much attention to the popups that appear before clicking install which a lot of people do. The image above just shows step one of the process which is cloning the git repository into my virtual machine and installing the prerequisites.</p>
+                
+                <img src="pentest2.jpg" alt="Penetration Testing Image 2">
+                <p>The image above shows the build process of the APK file. We use the -o command to output the file name into 'nothacking.apk' and the -i command to specify the IP address which in this case is the IP of the Kali Linux machine. The image shows how the command successfully created the file and we can see the file when we do the 'ls -lt' command to list the files in the current directory.</p>
+                
+                <img src="pentest3.jpg" alt="Penetration Testing Image 3">
+                <p>This image which can be seen above shows how a listener was hosted on port 4444 which was stated before.</p>
+                
+                <img src="pentest4.jpg" alt="Penetration Testing Image 4">
+                <p>Now that we have the listener set up, it's essential to make sure that we have an HTTP server running in order to allow us to host the file over onto the internet or local network. The start apache2.service command runs this and we can check that this has been run correctly by replacing the start with status. The image above shows this.</p>
+                
+                <img src="pentest5.jpg" alt="Penetration Testing Image 5">
+                <p>The final step to setting up AndroRat correctly is by copying the APK file that we created into the web application server directory which we can then send over to our target.</p>
+                
+                <img src="pentest6.jpg" alt="Penetration Testing Image 6">
+                <p>For the purpose of remaining within the legal parameters I used an android device emulation which was created using Genymotion for my target device, as it would be illegal to do otherwise without someone's permission. Above, you can see the android device emulation and you can see the link in the search bar which I typed out to direct the smart device to the webserver hosting the malicious APK file.</p>
+                
+                <img src="pentest7.jpg" alt="Penetration Testing Image 7">
+                <p>Once I clicked enter on the android device it immediately because downloading the file as can be seen in the tab at the top of the android device.</p>
+                
+                <img src="pentest8.jpg" alt="Penetration Testing Image 8">
+                <p>After clicking on the downloaded file, the user will be asked if they want to install the application. It is very important to note that a lot of us would just see this screen and click next without even reading was it entails. For the purpose of demonstration we can clearly see that installing this application comes with some severe consequences. The image above shows that by installing the application it will be given access to a variety of extremely sensitive information read messages, read call logs and so on.</p>
+                
+                <img src="pentest9.jpg" alt="Penetration Testing Image 9">
+                <p>When the user clicks next, the screenshot above shows what appears. Which is a very normal looking screen.</p>
+                
+                <img src="pentest10.jpg" alt="Penetration Testing Image 10">
+                <p>If we now jump back into the listener that we set up on Kali Linux we can see that just like that, we are in. We have complete control over the user's smartphone and can make it do a variety of different actions, such as take a picture, record their voice, get their location and so on.</p>
+        </div>
+    </div>
+
+
+    <!-- Section for Forensic Analysis -->
+    <div class="section">
+        <h2 class="section-heading">Forensic Analysis</h2>
+            <p>Forensic analysis involves investigating and analyzing digital evidence to understand the cause of security incidents or to reconstruct events. When I used Wireshark to capture and analyse network traffic generated by Nmap scans, I was performing a form of forensic analysis. Wireshark allows me to inspect network packets, which can help me understand how devices communicate on the network and identify potential security issues.</p>
+
+        <div class="image-container">
+                <h3>Evidence</h3>
+            <img src="forensic1.jpg" alt="Forensic Analysis Image 1">
+            <p>Wireshark is an extremely effective tool used to capture the traffic within a network and identify any security vulnerabilities within the network. The image above shows regular traffic within my network, showing nothing out of the ordinary.</p>
+
+            <img src="forensic2.jpg" alt="Forensic Analysis Image 2">
+            <p>To display an example of what the traffic would look like to raise cause for concern on Wireshark, I ran an Nmap scan on the network and used Wireshark to capture the traffic. We can see from the image above that this shows up highlighted red as it could be a potential for danger.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

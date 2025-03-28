@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metasploit Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Metasploit Exploitation Steps</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Using Metasploit for Penetration Testing</h2>
+        <p>In this project, I used Metasploit to exploit a vulnerable machine. Below are the steps I followed along with screenshots of the process.</p>
+
+        <div id="image-popup">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <img id="popup-img" src="" alt="Expanded Image">
+        </div>
+
+        <!-- Metasploit Steps with Images -->
+        <div class="metasploit-steps">
+
+            <!-- Step 1 -->
+            <div class="step">
+                <h3>Step 1: Identifying Machine IP Addresses</h3> 
+                <img src="Images/kali-ip.jpg" alt="Kali Linux IP Address">
+                <p>Once the two machines were span up the first task of action was to find out the IP addresses of both of the machines. I checked the IP address of the Kali Linux machine using the code <code>ip r</code> which is short for ip route. This command shows how network traffic is directed and is just a quick and simpler way be able to see the eth0 IP address which is the one I'm looking for. </p>
+               
+                <img src="Images/metasploitable-ip.jpg" alt="Metasploitable Machine IP Address">
+
+                <p>
+                Just for documenting purposes I also ran the traditional command to find out the IP address of the Metasploitable machine which is <code>ifconfig</code>. As you can see this still gets me the eth0 address of the Metasploitable machine which will be used as the target address.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+                <h3>Step 2: Scanning the Target</h3>
+                <p>Nmap is an abbreviation for Network Map. This is a great tool that allows us to see open ports on a network. I used Nmap to scan the target for open ports, service versions and used -O to identify the operating system of the Metasploitable machine. The full command I used to do all this can be seen below as <code>nmap -sV -O [192.168.0.44]</code>.</p>
+                <img src="Images/pen2.jpg" alt="Launching Metasploit">
+                <p>As you can see from the results of running the nmap scan in the image above there are many open ports on the Metasploitable machine and the one I will be targeting today is port 21 which has the vsftpd service running on it. </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+             <h3>Step 3: Common Vulnerabilities & Exposures</h3>
+                <p>The next step was to see if there was an exploit related to this service on the CVE website. As you can see from the image below, I ran a search on vsftpd and it returned 16 results back me. This is a good indication that this service is exploitable.</p>
+                <img src="Images/pen3.jpg" alt="Scanning Target with Nmap">
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step">
+                <h3>Step 4: Launching Metasploit</h3>
+                <p>I started the Metasploit(msf) framework by running <code>msfconsole</code> in the terminal.</p>
+                <img src="Images/pen4.jpg" alt="Finding Exploit">
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step">
+                <h3>Step 5: Exploit Search</h3>
+                <p>In the msf console, I ran the command <code>search vsftpd</code>. This command searches the metasploit framework for any mention of the word that follows 'search'. The image below shows the results of this command</p>
+                <img src="Images/pen5.jpg" alt="Setting up exploit">
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step">
+                <h3>Step 6: Choosing a Module</h3>
+                <p>The image below shows me selecting the second module in the list as this one was ranked as 'excellent' whereas the other one was ranked as 'good'. The command was simple and can be seen below as <code>use 1</code>. I then ran the <code>show options</code> code to display what parameters I need to pass to let this exploit work. </p>
+                <img src="Images/pen6.jpg" alt="Payload Selection">
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step">
+                <h3>Step 7: Running Exploit</h3>
+                <p>The screenshot below shows me setting the CHOSTS as the Kali Linux IP address and the RHOSTS which is the target, as the Metasploitable machines IP address. Finally, I ran the <code>exploit</code> to initiate the backdoor shell which was successful. </p>
+                <img src="Images/pen7.jpg" alt="Running the Exploit">
+            </div>
+
+            <!-- Step 8 -->
+            <div class="step">
+                <h3>Step 8: Gaining Shell Access</h3>
+                <p>After a successful exploit, I obtained a session, gaining remote control of the machine. The screenshot below shows me running some basic commands which show that I am the root user of the Metasploitable machine giving me free reigns of the entire machine.</p>
+                <img src="Images/pen8.jpg" alt="Gaining Shell Access">
+            </div>
+
+            <!-- Step 9 -->
+            <div class="step">
+                <h3>Step 9: Unauthorised Directory Creation</h3>
+                <p>Just to show that I have successfully hacked into the machine, I created a directory in the Metasploitable machine via running the command <code>mkdir</code> in the backdoor session of the Kali command line. The image below shows me running this command and shows that the file has been created.</p>
+                <img src="Images/pen9.jpg" alt="Privilege Escalation">
+            </div>
+
+            <!-- Step 10 -->
+            <div class="step">
+                <h3>Step 10: Metasploitable Check</h3>
+                <p>With root privelages I can pretty much do anything I wish with the system, whether it be installing malware or just deleting all files. For this example I created a file that says 'YOU HAVE BEEN HACKED'. The image below shows that when I run the <code>ls -l</code> command to list the files the directory has been created successfully. </p>
+                <img src="Images/pen10.jpg" alt="Extracting Sensitive Data">
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tahir Cybersecurity Portfolio</p>
+    </footer>
+
+
+</body>
+</html>
